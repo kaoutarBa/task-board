@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-import TasksColumn from "components/TasksColumn";
+import Home from "views/Home";
 
 function App() {
   return (
-   <TasksColumn/>
+   <Home/>
   );
 }
 
