@@ -4,18 +4,17 @@ import TaskCard from "components/TaskCard";
 import add from "assets/add.svg";
 
 
-const TasksColumn=({columnColor,color,borderColor,sectionName,tasks})=>{
+const TasksColumn=({columnName,background,borderColor,nameBackground})=>{
 return(
-        <Container>
-            <ColumnNameSection>
-                {sectionName}
-                <img src={add} alt={"add"}/>
+        <Container background={background} borderColor={borderColor}>
+            <ColumnNameSection nameBackground={nameBackground} borderColor={borderColor} >
+                {columnName}
+                <img src={add} alt={"add"} style={{cursor:"pointer"}}/>
             </ColumnNameSection>
             <CardsSection>   
-                <TaskCard cardOrder={"1"}/> 
-                <TaskCard cardOrder={"2"}/> 
-                <TaskCard cardOrder={"3"}/> 
-                <TaskCard cardOrder={"4"}/> 
+                <TaskCard cardOrder={"1"} borderColor={borderColor}/> 
+                <TaskCard cardOrder={"2"} borderColor={borderColor}/> 
+                <TaskCard cardOrder={"2"} borderColor={borderColor}/> 
             </CardsSection>
         </Container>
     );

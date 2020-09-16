@@ -3,12 +3,12 @@ import {CardActions,CardOrder,Card,Button,Task} from './TaskCard.styles';
 import trash from 'assets/trash.svg';
 import edit from 'assets/edit.svg';
 
-const TaskCard=({cardOrder})=>{
+const TaskCard=({cardOrder,borderColor})=>{
 return(
-        <Card>
+        <Card borderColor={borderColor} draggable>
             <CardOrder>#{cardOrder}</CardOrder>     
             <Task> task</Task>     
-            <CardActions>
+            <CardActions borderColor={borderColor}>
                 <Button>
                     <img src={edit} alt={"edit"}/> 
                 </Button>

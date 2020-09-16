@@ -6,7 +6,7 @@ const Card=styled.div`
 width: 95%;
 height: 76px;
 background: #FEFEFE;
-border: 1px solid #950A7F;
+border: 1px solid ${props=>props.borderColor};
 box-sizing: border-box;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 2px;
@@ -15,6 +15,8 @@ margin-bottom:5px;
 display:grid;
 grid-template-columns:100% ;
 grid-template-rows:17px auto 17px;
+
+cursor:grab;
 
 `;
 
@@ -33,7 +35,7 @@ padding:5px;
 const CardActions=styled.div`
 display:flex;
 justify-content:flex-end;
-border-top:1px solid #950A7F;
+border-top:1px solid ${props=>props.borderColor};
 height:17px;
 grid-row:3/3;
 padding-right:5px;
