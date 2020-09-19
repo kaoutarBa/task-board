@@ -2,6 +2,7 @@ import React from "react";
 import {CardActions,CardOrder,Card,Button,Task} from './TaskCard.styles';
 import trash from 'assets/trash.svg';
 import edit from 'assets/edit.svg';
+import AddModal from '../AddModal';
 
 const TaskCard=({cardOrder,borderColor})=>{
 return(
@@ -16,6 +17,7 @@ return(
                     <img src={trash} alt={"trash"}/>
                 </Button>
             </CardActions>
+            <AddModal/>
         </Card>       
     );
 };
