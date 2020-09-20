@@ -4,20 +4,35 @@ import {ModalContainer,
     Title,
     AddInput,
     SaveBtn,
-    CancelBtn} from "./AddModal.styles";
+    CancelBtn,
+    ModalActions,
+    ModalTitle} from "./AddModal.styles";
 import addForModal from "assets/addForModal.svg";
+import Dropdown from "components/Dropdown";
 
-const AddModal=()=>{
+const AddModal=({setDisplayModal})=>{
+    const handleSave=()=>{
+        setDisplayModal(false);
+    };
+    const handleCancel=()=>{
+        setDisplayModal(false);
+    };
 return(
-<ModalContainer>
+    
+    <ModalContainer>
     <AddContainer>
-        <div style={{display:"flex"}}>
+        <ModalTitle >
             <img src={addForModal} alt={"addForModal"}/>
             <Title> Add</Title>
-        </div>
+        </ModalTitle>
+        <Dropdown defSection={'back log'}/>
     <AddInput/>
-    <SaveBtn>Save</SaveBtn>
-    <CancelBtn>Cancel</CancelBtn>
+        <ModalActions >
+            <CancelBtn type='button' onClick={handleCancel} >Cancel</CancelBtn>
+            <SaveBtn type='button' onClick={handleSave} >Save</SaveBtn>
+            
+        </ModalActions>
+    
     </AddContainer>
 </ModalContainer>);
 };

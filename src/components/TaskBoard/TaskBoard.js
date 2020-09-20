@@ -11,11 +11,12 @@ const TaskBoard=()=>{
         {name:"done",borderColor:"#15950A",background:"#E9FFE8",nameBackground:"#C5FBC0"}]
 return(
 <BoardContainer>
-    {taskColumns.map(column=>
+    {taskColumns.map((column,index)=>
         <TasksColumn  columnName={column.name} 
             borderColor={column.borderColor}
             background={column.background} 
-            nameBackground={column.nameBackground} />)}
+            nameBackground={column.nameBackground}
+            key={index} />)}
 
 </BoardContainer>);
 };

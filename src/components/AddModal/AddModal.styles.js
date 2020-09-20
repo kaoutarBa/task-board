@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const  ModalContainer=styled.div`
+  display:flex;
   position: fixed;
   z-index: 20;
   left: 0;
@@ -9,7 +10,7 @@ const  ModalContainer=styled.div`
   height: 100%; 
   background-color: rgba(0,0,0,0.1); 
   overflow-y:hidden;
-  display:flex;
+  justify-items:space-around;
 `;
 
 const AddContainer= styled.div`
@@ -19,6 +20,9 @@ background: rgba(255, 255, 255, 0.99);
 border: 1px solid #15950A;
 border-radius: 10px;
 margin:auto;
+display:flex;
+flex-direction:column;
+
 `;
 const Title=styled.div`
 
@@ -38,6 +42,7 @@ outline:none;
 border:none;
 border-left:1px solid #15950A;
 padding:10px;
+align-self:center;
 
 `;
 
@@ -56,6 +61,7 @@ color: #FEFEFE;
 border:none;
 outline:none;
 cursor: pointer;
+margin:10px;
 
 `;
 
@@ -69,12 +75,35 @@ font-size: 15px;
 line-height: 18px;
 color: #15950A;
 background-color: white; 
-
+margin:10px;
 border:none;
 outline:none;
 cursor: pointer;
 `;
 
+const ModalActions=styled.div`
+display:flex;
+justify-content:flex-end;
+align-items:center;
+margin-right:10px;
+
+`;
+const ModalTitle=styled.div`
+display:flex;
+margin-top:20px;
+margin-left:20px;
+justify-content:space-around;
+width:70px;
+
+`;
 
 
-export {ModalContainer,AddContainer,Title,AddInput,SaveBtn,CancelBtn};
+export {
+  ModalContainer,
+  ModalTitle,
+  AddContainer,
+  Title,
+  AddInput,
+  SaveBtn,
+  CancelBtn,
+  ModalActions};
