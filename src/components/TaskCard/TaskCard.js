@@ -31,6 +31,7 @@ const TaskCard=({
                 </Button>
             </CardActions>
             <EditModal 
+                taskId={taskId}
                 task={task}
                 taskIndex={cardOrder}
                 defSection={columnName}

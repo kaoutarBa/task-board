@@ -1,9 +1,9 @@
-import React,{useState} from "react";
+import React from "react";
 import {
     ModalContainer,
     DeleteContainer,
     Title,
-    SaveBtn,
+    DeleteBtn,
     CancelBtn,
     ModalActions,
     DeleteStatement,
@@ -41,7 +41,7 @@ return(
             </DeleteStatement>
             <ModalActions >
                 <CancelBtn type={'button'} onClick={handleCancel} >Cancel</CancelBtn>
-                <SaveBtn type={'button'} onClick={handleSave} >Save</SaveBtn>
+                <DeleteBtn type={'button'} onClick={handleSave} >Delete</DeleteBtn>
             </ModalActions>
         </DeleteContainer>
     </ModalContainer>

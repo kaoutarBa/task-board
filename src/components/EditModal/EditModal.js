@@ -12,9 +12,10 @@ import Dropdown from "components/Dropdown";
 
 
 const EditModal=({
+    taskId,
     task,
     defSection,
-    taskIndex,
+    // taskIndex,
     tasks,
     setTasks,
     displayEditModal,
@@ -29,7 +30,7 @@ const EditModal=({
         const lastIndex=tasks.filter(task=>task.column===section)
         .sort((a,b)=>a.taskIndex-b.taskIndex);  
         const newTasks=tasks.map(el=>{
-            if(el.task===task && el.taskIndex===taskIndex){
+            if(el.id===taskId){
                 el.task=inputValue;
                 el.column=section;
                 el.taskIndex=lastIndex.length+1;

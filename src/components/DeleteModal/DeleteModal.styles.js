@@ -37,7 +37,7 @@ color: #F54646;
 `;
 
 
-const SaveBtn=styled.button`
+const DeleteBtn=styled.button`
 width: 76px;
 height: 30px;
 background: #F54646;
@@ -100,6 +100,6 @@ export {
   ModalTitle,
   DeleteContainer,
   Title,
-  SaveBtn,
+  DeleteBtn,
   CancelBtn,
   ModalActions};
