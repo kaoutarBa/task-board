@@ -24,14 +24,15 @@ return(
                 {tasks.filter(task=>task.column===columnName)
                 .sort((a,b)=>a.taskIndex-b.taskIndex)
                 .map((t,index)=><TaskCard 
-                columnName={columnName}
-                key={index}
-                cardOrder={t.taskIndex} 
-                borderColor={borderColor} 
-                task={t.task}
-                setTasks={setTasks}
-                tasks={tasks}
-                />)}
+                                    taskId={t.id}
+                                    columnName={columnName}
+                                    key={index}
+                                    cardOrder={t.taskIndex} 
+                                    borderColor={borderColor} 
+                                    task={t.task}
+                                    setTasks={setTasks}
+                                    tasks={tasks}
+                                    />)}
             </CardsSection>
             <AddModal 
             defSection={columnName}

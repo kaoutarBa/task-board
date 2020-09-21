@@ -9,7 +9,7 @@ import {ModalContainer,
     ModalTitle} from "./AddModal.styles";
 import addForModal from "assets/addForModal.svg";
 import Dropdown from "components/Dropdown";
-
+import shortid from 'shortid';
 
 const AddModal=({
     tasks,
@@ -25,7 +25,8 @@ const AddModal=({
         const lastIndex=tasks.filter(task=>task.column===section)
                             .sort((a,b)=>a.taskIndex-b.taskIndex);                
         setTasks([...tasks,
-                {task:inputValue,
+                {id:shortid.generate(),
+                task:inputValue,
                 taskIndex:lastIndex.length+1,
                 column:section}
             ]);

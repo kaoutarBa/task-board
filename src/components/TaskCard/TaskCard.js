@@ -3,8 +3,10 @@ import {CardActions,CardOrder,Card,Button,Task} from './TaskCard.styles';
 import trash from 'assets/trash.svg';
 import edit from 'assets/edit.svg';
 import EditModal from "components/EditModal";
+import DeleteModal from "components/DeleteModal";
 
 const TaskCard=({
+    taskId,
     cardOrder,
     borderColor,
     task,
@@ -13,16 +15,18 @@ const TaskCard=({
     setTasks})=>{
 
     const[displayEditModal,setDisplayEditModal]=useState(false);
+    const[displayDeleteModal,setDisplayDeleteModal]=useState(false);
+
     
     return(
         <Card borderColor={borderColor} draggable>
             <CardOrder>#{cardOrder}</CardOrder>     
             <Task>{task}</Task>     
             <CardActions borderColor={borderColor}>
-                <Button type={'button'} >
-                    <img src={edit} onClick={()=>setDisplayEditModal(true)} alt={"edit"}/> 
+                <Button type={'button'} onClick={()=>setDisplayEditModal(true)}>
+                    <img src={edit} alt={"edit"}/> 
                 </Button>
-                <Button>
+                <Button type={'button'} onClick={()=>setDisplayDeleteModal(true)}>
                     <img src={trash} alt={"trash"}/>
                 </Button>
             </CardActions>
@@ -34,6 +38,12 @@ const TaskCard=({
                 setTasks={setTasks}
                 displayEditModal={displayEditModal} 
                 setDisplayEditModal={setDisplayEditModal}/>
+            <DeleteModal 
+                tasks={tasks}
+                setTasks={setTasks}
+                taskId={taskId}
+                displayDeleteModal={displayDeleteModal} 
+                setDisplayDeleteModal={setDisplayDeleteModal}/>
         </Card>       
     );
 };

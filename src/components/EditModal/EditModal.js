@@ -7,7 +7,7 @@ import {ModalContainer,
     CancelBtn,
     ModalActions,
     ModalTitle} from "./EditModal.styles";
-import edit from "assets/edit.svg";
+import editForModal from "assets/editForModal.svg";
 import Dropdown from "components/Dropdown";
 
 
@@ -53,7 +53,7 @@ return(
     <ModalContainer display={displayEditModal}>
         <EditContainer>
             <ModalTitle >
-                <img src={edit} alt={"EditForModal"}/>
+                <img src={editForModal} alt={"EditForModal"}/>
                 <Title>Edit</Title>
             </ModalTitle>
             <Dropdown section={section} setSection={setSection} color={"#113FB4"}/>

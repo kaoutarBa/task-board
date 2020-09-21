@@ -4,7 +4,7 @@ import {BoardContainer} from "./TaskBoard.styles";
 
 
 
-var tasks1=[{task:"batata",taskIndex:1,column:"done"}]
+// var tasks1=[{id:" jhuhugu",task:"batata",taskIndex:1,column:"done"}]
 
 const TaskBoard=()=>{
     const [tasks,setTasks]=useState([]);
