@@ -21,11 +21,17 @@ return(
                 <img src={add} alt={"add"} onClick={()=>setDisplayAddModal(true)} style={{cursor:"pointer"}}/>
             </ColumnNameSection>
             <CardsSection>
-                {tasks.filter(task=>task.column===columnName).map((t,index)=><TaskCard 
+                {tasks.filter(task=>task.column===columnName)
+                .sort((a,b)=>a.taskIndex-b.taskIndex)
+                .map((t,index)=><TaskCard 
+                columnName={columnName}
                 key={index}
                 cardOrder={t.taskIndex} 
                 borderColor={borderColor} 
-                task={t.task}/>)}
+                task={t.task}
+                setTasks={setTasks}
+                tasks={tasks}
+                />)}
             </CardsSection>
             <AddModal 
             defSection={columnName}

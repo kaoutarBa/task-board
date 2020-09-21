@@ -47,8 +47,9 @@ return(
                 <img src={addForModal} alt={"addForModal"}/>
                 <Title>Add</Title>
             </ModalTitle>
-            <Dropdown section={defSection} setSection={setSection} />
+            <Dropdown section={defSection} setSection={setSection} color={"#15950A"} />
             <AddInput 
+                tabindex={0}
                 placeholder={"Add a task"}
                 onChange={handleChange}
                 value={inputValue} />

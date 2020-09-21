@@ -3,7 +3,7 @@ import styled from "styled-components";
 const DropdownContainer=styled.div`
 width: 102px;
 height: 19px;
-border-bottom:1px solid #15950A;
+border-bottom:1px solid ${props=>props.bottomBorderColor};
 font-family: sans-serif;
 font-style: normal;
 font-weight: normal;
