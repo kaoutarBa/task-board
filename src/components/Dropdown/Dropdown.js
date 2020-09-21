@@ -2,16 +2,13 @@ import React,{useState} from "react";
 import {DropdownContainer,DropdownContent,Choice} from "./Dropdown.styles";
 import polygone from "assets/polygone.svg";
 
-const Dropdown=({defSection})=>{
-    const [section,setSection]=useState(defSection);
+const Dropdown=({section,setSection})=>{
     const [display,setDisplay]=useState('none');
-
     const sections=['backlog','to do','doing','done'];
-
     const handleClick=(el)=>{
         setSection(el);
     };
-    const handleDisplay=(e)=>{
+    const handleDisplay=()=>{
         setDisplay(display==='block'?'none':'block');
     };
     return(

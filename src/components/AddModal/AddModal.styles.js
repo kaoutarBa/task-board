@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
+
+
 const  ModalContainer=styled.div`
-  display:flex;
+  display:${props=>props.display?"flex":"none"};
   position: fixed;
-  z-index: 20;
+  z-index: 2;
   left: 0;
   top: 0;
   width: 100%; 
   height: 100%; 
-  background-color: rgba(0,0,0,0.1); 
+  background: #0a0a0a99; 
   overflow-y:hidden;
-  justify-items:space-around;
 `;
 
 const AddContainer= styled.div`
@@ -22,7 +23,6 @@ border-radius: 10px;
 margin:auto;
 display:flex;
 flex-direction:column;
-
 `;
 const Title=styled.div`
 
