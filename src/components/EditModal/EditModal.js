@@ -51,7 +51,7 @@ const EditModal=({
     };
 
 return(
-    <ModalContainer display={displayEditModal}>
+    <ModalContainer display={displayEditModal?"flex":"none"}>
         <EditContainer>
             <ModalTitle >
                 <img src={editForModal} alt={"EditForModal"}/>

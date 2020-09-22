@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const  ModalContainer=styled.div`
-  display:${props=>props.display?"flex":"none"};
+  display:${props=>props.display};
   position: fixed;
   z-index: 2;
   left: 0;

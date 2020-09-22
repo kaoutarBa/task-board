@@ -42,7 +42,7 @@ const AddModal=({
     };
 
 return(
-    <ModalContainer display={displayModal}>
+    <ModalContainer display={displayModal?"flex":"none"}>
         <AddContainer>
             <ModalTitle >
                 <img src={addForModal} alt={"addForModal"}/>

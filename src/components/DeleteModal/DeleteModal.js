@@ -30,7 +30,7 @@ const DeleteModal=({
     
 
 return(
-    <ModalContainer display={displayDeleteModal}>
+    <ModalContainer display={displayDeleteModal?"flex":"none"}>
         <DeleteContainer>
             <ModalTitle >
                 <img src={trashForModal} alt={"trashForModal"}/>
