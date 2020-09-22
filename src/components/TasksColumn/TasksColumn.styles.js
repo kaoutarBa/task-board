@@ -25,11 +25,11 @@ font-size: 16px;
 
 const CardsSection=styled.div`
 width:100%;
-min-height: 50px;
+height: 460px;
 display:flex;
 flex-direction:column;
 align-items:center;
-margin-top:5px;
+padding-top:5px;
 margin-bottom:4px;
 
 `;

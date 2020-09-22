@@ -6,6 +6,7 @@ import EditModal from "components/EditModal";
 import DeleteModal from "components/DeleteModal";
 
 const TaskCard=({
+    handleDrag,
     taskId,
     cardOrder,
     borderColor,
@@ -19,7 +20,9 @@ const TaskCard=({
 
     
     return(
-        <Card borderColor={borderColor} draggable>
+        <Card borderColor={borderColor} 
+        onDrag={e=>handleDrag(e,taskId)}
+        draggable >
             <CardOrder>#{cardOrder}</CardOrder>     
             <Task>{task}</Task>     
             <CardActions borderColor={borderColor}>
