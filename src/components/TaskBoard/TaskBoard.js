@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import TasksColumn from "../TasksColumn";
 import {BoardContainer} from "./TaskBoard.styles";
 
@@ -15,6 +15,17 @@ const TaskBoard=()=>{
     const [tasks,setTasks]=useState([]);
     const [draggedTaskId,setDraggedTaskId]=useState("");
     const [targetColumn,setTargetColumn]=useState("");
+
+    useEffect(() => {
+        const data = localStorage.getItem("tasks");
+        if (data) {
+            setTasks(JSON.parse(data));
+        }
+    }, [setTasks]);
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+      });
+    
 
     const handleDrag=(e,id)=>{
         e.preventDefault();

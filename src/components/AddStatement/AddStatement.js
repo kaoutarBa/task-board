@@ -10,7 +10,7 @@ return(
         {/* <StyledAddStatement>
     <img src={add} alt={"add"}/>
     add a task in one of these sections
-</StyledAddStatement>); */}
+    </StyledAddStatement>); */}
     </div>
 );
 };
